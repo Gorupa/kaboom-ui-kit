@@ -11,21 +11,35 @@
     <header class="hero">
         <div class="k-speech-bubble">Holy CSS, Batman!</div>
         <h1>KABOOM! UI</h1>
-        <p>A purely nostalgic, 100% CSS design system. Bring back the heavy ink, offset shadows, and halftone dots of vintage comic books.</p>
+        <p>Stop building boring, corporate websites. Bring the heavy ink, misaligned shadows, and halftone dots of the Golden Age of Comics directly to the web.</p>
         <a href="#pricing" class="k-btn">Get the Kit</a>
         <a href="#components" class="k-btn blue" style="margin-left: 16px;">View Components</a>
     </header>
 
+    <div class="container" style="margin-top: -60px; position: relative; z-index: 10;">
+        <div class="k-card" style="text-align: center; border-color: var(--k-blue); border-width: 6px;">
+            <div class="k-badge" style="background: var(--k-blue); top: -20px; position: absolute; left: 20px;">LIVE PREVIEW</div>
+            <h2 style="margin-bottom: 24px;">Test Your Superpowers</h2>
+            
+            <div style="max-width: 500px; margin: 0 auto;">
+                <div class="k-speech-bubble" id="live-bubble" style="font-size: 24px; color: var(--k-red); transition: all 0.1s;">
+                    Type below to see me change!
+                </div>
+                <input type="text" class="k-input" id="live-input" placeholder="Type a heroic catchphrase..." oninput="updateBubble()">
+            </div>
+        </div>
+    </div>
+
     <div class="container" id="components">
-        <div style="text-align: center; margin-bottom: 40px;">
-            <div class="k-badge">Components Included!</div>
+        <div style="text-align: center; margin-bottom: 40px; margin-top: 40px;">
+            <div class="k-badge">Included in Free Tier</div>
             <h2>Build Pages With a PUNCH 🥊</h2>
         </div>
 
         <div class="grid-2">
             <div class="k-card">
                 <h3>Action Buttons</h3>
-                <p>Heavy borders and misaligned print shadows that physically press down when clicked.</p>
+                <p>Heavy borders and misaligned print shadows that physically press down when clicked. Feel the impact.</p>
                 <button class="k-btn" onclick="bamEffect()">Primary Action</button>
                 <br><br>
                 <button class="k-btn blue">Secondary Act</button>
@@ -33,15 +47,50 @@
 
             <div class="k-card" style="background-color: var(--k-green);">
                 <h3 style="color: #FFF; text-shadow: 2px 2px 0px var(--k-ink);">Forms & Inputs</h3>
-                <input type="text" class="k-input" placeholder="Enter your superhero name...">
-                <input type="email" class="k-input" placeholder="Secret email address...">
+                <input type="text" class="k-input" placeholder="Enter your secret identity...">
+                <input type="email" class="k-input" placeholder="Batcave email address...">
                 <button class="k-btn full">Subscribe!</button>
             </div>
         </div>
     </div>
 
+    <div class="container" style="text-align: center; margin-top: 40px;">
+        <h2 style="font-size: 48px; color: var(--k-red); text-shadow: 3px 3px 0px var(--k-ink);">Upgrade to Superhero Status</h2>
+        <p style="font-size: 20px; max-width: 700px; margin: 0 auto 40px auto;">The Premium Kit gives you the ultimate utility belt. 50+ hand-crafted components to build dashboards, blogs, and landing pages that pop off the screen.</p>
+        
+        <div class="grid-3" style="text-align: left;">
+            <div class="k-card" style="padding: 20px;">
+                <h3 style="color: var(--k-blue);">Layout & Nav</h3>
+                <ul class="feature-list">
+                    <li>Dynamic Navbars</li>
+                    <li>Comic-strip Grids</li>
+                    <li>Sidebar Menus</li>
+                    <li>Hero Headers</li>
+                </ul>
+            </div>
+            <div class="k-card" style="padding: 20px;">
+                <h3 style="color: var(--k-red);">Data & Tables</h3>
+                <ul class="feature-list">
+                    <li>Stylized Data Tables</li>
+                    <li>Progress Bars</li>
+                    <li>Villain Callout Cards</li>
+                    <li>Statistic Widgets</li>
+                </ul>
+            </div>
+            <div class="k-card" style="padding: 20px;">
+                <h3 style="color: var(--k-green);">Ready Templates</h3>
+                <ul class="feature-list">
+                    <li>Admin Dashboard</li>
+                    <li>Login/Signup Screen</li>
+                    <li>Blog Layout</li>
+                    <li>Blank Starter File</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <div class="container" id="pricing">
-        <h2 style="text-align: center; font-size: 48px;">Choose Your Arsenal</h2>
+        <h2 style="text-align: center; font-size: 48px; margin-top: 40px;">Choose Your Arsenal</h2>
         
         <div class="grid-2" style="max-width: 800px; margin: 40px auto;">
             <div class="k-card pricing-card">
@@ -55,7 +104,7 @@
                     <li>✖ No Premium Components</li>
                     <li>✖ No Page Templates</li>
                 </ul>
-                <a href="https://github.com/gorupa/kaboom-ui-lite" target="_blank" class="k-btn blue full" style="text-decoration: none;">Download Lite</a>
+                <a href="https://github.com/Gorupa/kaboom-ui-kit" target="_blank" class="k-btn blue full" style="text-decoration: none;">Download Lite</a>
             </div>
 
             <div class="k-card pricing-card" style="transform: scale(1.05); border-color: var(--k-red);">
@@ -65,8 +114,8 @@
                 <div class="price">₹499 <span style="font-size: 20px; color: #555;">(or $9)</span></div>
                 <ul style="margin-bottom: 24px;">
                     <li>✔ Everything in Free</li>
-                    <li>✔ 50+ Premium UI Components</li>
-                    <li>✔ 3 Ready-to-use HTML Templates</li>
+                    <li>✔ 50+ Premium Components</li>
+                    <li>✔ 3 Ready-to-use Templates</li>
                     <li>✔ Lifetime Updates</li>
                 </ul>
                 
@@ -75,6 +124,20 @@
                 <a href="https://wa.me/917339992788?text=Hey%20Gaurav!%20%F0%9F%92%A5%20I%20just%20paid%20%E2%82%B9499%20via%20UPI%20for%20the%20KABOOM!%20Premium%20Kit.%20Here%20is%20my%20screenshot%3A" target="_blank" class="k-btn full" style="background-color: var(--k-green); text-decoration: none; display: inline-block; font-size: 20px;">Step 2: Get File on WhatsApp</a>
                 
                 <p style="font-size: 14px; margin-top: 16px; color: var(--k-ink); font-weight: bold; line-height: 1.4;">*Pay via UPI, then send the screenshot on WhatsApp to get your Premium .zip file instantly!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="text-align: center; margin-bottom: 60px;">
+        <h2 style="font-size: 36px;">Hall of Justice (Reviews)</h2>
+        <div class="grid-2" style="max-width: 800px; margin: 0 auto; text-align: left;">
+            <div class="k-card" style="border-radius: 15px 225px 255px 15px/255px 15px 225px 15px;">
+                <p style="font-size: 18px; font-style: italic;">"I dropped this into my portfolio site and instantly got messages asking how I did it. The halftone dots are incredible."</p>
+                <h4 style="margin: 0; color: var(--k-blue);">— Clark K., Reporter</h4>
+            </div>
+            <div class="k-card" style="border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;">
+                <p style="font-size: 18px; font-style: italic;">"Saved me hours of writing custom CSS. The dashboard template alone is worth triple the price. ZAP!"</p>
+                <h4 style="margin: 0; color: var(--k-red);">— Bruce W., Developer</h4>
             </div>
         </div>
     </div>
