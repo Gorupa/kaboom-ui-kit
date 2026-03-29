@@ -1,3 +1,7 @@
+/* =========================================
+   KABOOM! UI - Free Public Version
+   ========================================= */
+
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap');
 
 :root {
@@ -46,7 +50,8 @@ h1, h2, h3, h4 {
     background: var(--k-paper); opacity: 0.85; z-index: -1;
 }
 
-/* --- KABOOM COMPONENTS --- */
+/* --- FREE COMPONENTS --- */
+
 .k-card {
     background-color: var(--k-white);
     border: var(--k-stroke);
@@ -73,6 +78,7 @@ h1, h2, h3, h4 {
 }
 .k-btn:hover { background-color: var(--k-red); color: var(--k-white); }
 .k-btn:active { transform: translate(4px, 4px); box-shadow: var(--k-shadow-hover); }
+
 .k-btn.blue { background-color: var(--k-blue); color: var(--k-white); }
 .k-btn.blue:hover { background-color: var(--k-ink); }
 .k-btn.full { width: 100%; text-align: center; }
@@ -92,12 +98,12 @@ h1, h2, h3, h4 {
 .k-speech-bubble::after {
     content: ''; position: absolute; bottom: -24px; left: 50px;
     border-width: 24px 24px 0; border-style: solid;
-    border-color: var(--k-ink) transparent; display: block; width: 0;
+    border-color: var(--k-ink) transparent display; display: block; width: 0;
 }
 .k-speech-bubble::before {
     content: ''; position: absolute; bottom: -16px; left: 54px;
     border-width: 18px 18px 0; border-style: solid;
-    border-color: var(--k-white) transparent; display: block; width: 0; z-index: 1;
+    border-color: var(--k-white) transparent display; display: block; width: 0; z-index: 1;
 }
 
 .k-input {
@@ -113,7 +119,10 @@ h1, h2, h3, h4 {
     transition: box-shadow 0.2s, background-color 0.2s;
     margin-bottom: 16px;
 }
-.k-input:focus { box-shadow: var(--k-shadow); background-color: rgba(255, 209, 102, 0.1); }
+.k-input:focus {
+    box-shadow: var(--k-shadow);
+    background-color: rgba(255, 209, 102, 0.1);
+}
 
 .k-badge {
     background: var(--k-red);
