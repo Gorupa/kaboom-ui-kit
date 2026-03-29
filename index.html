@@ -4,47 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KABOOM! UI - Retro Comic CSS Framework</title>
-    <link rel="stylesheet" href="css/comic-ui.css">
+    <link rel="stylesheet" href="css/kaboom-core.css">
+    <style>
+        .hero { text-align: center; padding: 80px 20px; border-bottom: var(--k-stroke); background-color: var(--k-yellow); }
+        .hero h1 { font-size: 80px; margin-bottom: 0; text-shadow: 4px 4px 0px #FFF, 8px 8px 0px var(--k-ink); }
+        .hero p { font-size: 24px; max-width: 600px; margin: 20px auto 40px auto; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin: 60px 0; }
+        .pricing-card { text-align: center; }
+        .pricing-card h2 { font-size: 40px; color: var(--k-blue); }
+        .pricing-card .price { font-family: 'Bangers', cursive; font-size: 60px; margin: 20px 0; color: var(--k-red); }
+        .pricing-card ul { list-style: none; padding: 0; margin: 0 0 30px 0; text-align: left; }
+        .pricing-card li { margin-bottom: 12px; font-size: 18px; border-bottom: 2px dashed var(--k-ink); padding-bottom: 8px; }
+    </style>
 </head>
-<body class="halftone-bg">
+<body class="k-halftone">
 
     <header class="hero">
-        <div class="speech-bubble">Holy CSS, Batman!</div>
+        <div class="k-badge" style="margin-bottom: 20px;">Holy CSS, Batman!</div>
         <h1>KABOOM! UI</h1>
         <p>A purely nostalgic, 100% CSS design system. Bring back the heavy ink, offset shadows, and halftone dots of vintage comic books.</p>
-        <a href="#pricing" class="comic-btn">Get the Kit</a>
-        <a href="#components" class="comic-btn secondary" style="margin-left: 16px;">View Components</a>
+        <a href="#pricing" class="k-btn">Get the Kit</a>
+        <a href="#components" class="k-btn blue" style="margin-left: 16px;">View Components</a>
     </header>
 
-    <div class="container" id="components">
+    <div class="k-container" id="components">
         <div style="text-align: center; margin-bottom: 40px;">
-            <div class="comic-badge">Components Included!</div>
+            <div class="k-badge">Components Included!</div>
             <h2>Build Pages With a PUNCH 🥊</h2>
         </div>
 
         <div class="grid-2">
-            <div class="comic-card">
+            <div class="k-card">
                 <h3>Action Buttons</h3>
                 <p>Heavy borders and misaligned print shadows that physically press down when clicked.</p>
-                <button class="comic-btn" onclick="bamEffect()">Primary Action</button>
+                <button class="k-btn" onclick="bamEffect()">Primary Action</button>
                 <br><br>
-                <button class="comic-btn secondary">Secondary Act</button>
+                <button class="k-btn blue">Secondary Act</button>
             </div>
 
-            <div class="comic-card" style="background-color: var(--k-green);">
+            <div class="k-card" style="background-color: var(--k-green);">
                 <h3 style="color: #FFF; text-shadow: 2px 2px 0px var(--k-ink);">Forms & Inputs</h3>
-                <input type="text" class="comic-input" placeholder="Enter your superhero name...">
-                <input type="email" class="comic-input" placeholder="Secret email address...">
-                <button class="comic-btn" style="width: 100%;">Subscribe!</button>
+                <input type="text" class="k-input" placeholder="Enter your superhero name...">
+                <input type="email" class="k-input" placeholder="Secret email address...">
+                <button class="k-btn full">Subscribe!</button>
             </div>
         </div>
     </div>
 
-    <div class="container" id="pricing">
+    <div class="k-container" id="pricing">
         <h2 style="text-align: center; font-size: 48px;">Choose Your Arsenal</h2>
         
         <div class="grid-2" style="max-width: 800px; margin: 40px auto;">
-            <div class="comic-card pricing-card">
+            
+            <div class="k-card pricing-card">
                 <h2>The Sidekick</h2>
                 <p>Perfect for trying out the aesthetic.</p>
                 <div class="price">FREE</div>
@@ -55,24 +67,23 @@
                     <li>✖ No Premium Components</li>
                     <li>✖ No Page Templates</li>
                 </ul>
-                <a href="https://github.com/Gorupa/kaboom-ui-kit" target="_blank" class="comic-btn secondary" style="width: 100%; text-decoration: none;">Download Lite</a>
+                <a href="https://github.com/gorupa/kaboom-ui" target="_blank" class="k-btn blue full" style="text-decoration: none;">View Source (GitHub)</a>
             </div>
 
-            <div class="comic-card pricing-card" style="transform: scale(1.05); border-color: var(--k-red);">
-                <div class="comic-badge" style="position: absolute; top: -15px; right: -10px;">BEST VALUE!</div>
+            <div class="k-card pricing-card" style="transform: scale(1.05); border-color: var(--k-red);">
+                <div class="k-badge" style="position: absolute; top: -15px; right: -10px;">BEST VALUE!</div>
                 <h2>The Superhero</h2>
                 <p>The complete framework for serious builders.</p>
                 <div class="price">₹499 <span style="font-size: 20px; color: #555;">(or $9)</span></div>
                 <ul>
                     <li>✔ Everything in Free</li>
-                    <li>✔ 50+ Premium UI Components</li>
+                    <li>✔ The Complete Premium CSS</li>
                     <li>✔ 3 Ready-to-use HTML Templates</li>
-                    <li>✔ Figma Design Assets</li>
+                    <li>✔ Commercial Use License</li>
                     <li>✔ Lifetime Updates</li>
                 </ul>
                 
-                <a href="upi://pay?pa=gauravkalal@ybl&pn=Gaurav&cu=INR&am=499&tn=KABOOM%20UI%20Premium" class="comic-btn" style="width: 100%; text-decoration: none; display: inline-block; text-align: center; font-size: 22px;">Pay ₹499 via UPI</a>
-                <p style="font-size: 14px; margin-top: 12px; color: var(--k-ink); font-weight: bold;">*Opens UPI app directly on mobile</p>
+                <a href="https://www.instamojo.com/YOUR_LINK_HERE" class="k-btn full" style="text-decoration: none; display: inline-block; text-align: center; font-size: 22px;">Buy Now (₹499)</a>
             </div>
         </div>
     </div>
@@ -82,7 +93,6 @@
         <p style="display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 18px; margin: 0;">
             Built with heavy ink by 
             <a href="https://github.com/gorupa" target="_blank" style="color: var(--k-red); display: flex; align-items: center; gap: 6px; text-decoration: none; font-weight: 700;">
-                <svg height="22" width="22" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
                 @gorupa
             </a>
         </p>
