@@ -6,12 +6,12 @@
 
 :root {
     /* Vintage Comic Color Palette */
-    --k-paper: #FDFBF7;      /* Aged newsprint */
-    --k-ink: #111111;        /* Heavy black ink */
-    --k-red: #E63946;        /* Punchy comic red */
-    --k-yellow: #FFD166;     /* Mustard action yellow */
-    --k-blue: #457B9D;       /* Faded cyan */
-    --k-green: #06D6A0;      /* Toxic green */
+    --k-paper: #FDFBF7;      
+    --k-ink: #111111;        
+    --k-red: #E63946;        
+    --k-yellow: #FFD166;     
+    --k-blue: #457B9D;       
+    --k-green: #06D6A0;      
     
     /* Standardized Comic Borders & Shadows */
     --k-stroke: 4px solid var(--k-ink);
@@ -53,7 +53,6 @@ h1, h2, h3, h4 {
 
 /* --- KABOOM COMPONENTS --- */
 
-/* 1. Comic Card */
 .comic-card {
     background-color: #FFFFFF;
     border: var(--k-stroke);
@@ -64,7 +63,6 @@ h1, h2, h3, h4 {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* 2. Action Buttons */
 .comic-btn {
     display: inline-block;
     background-color: var(--k-yellow);
@@ -85,7 +83,6 @@ h1, h2, h3, h4 {
 .comic-btn.secondary { background-color: var(--k-blue); color: #FFF; }
 .comic-btn.secondary:hover { background-color: var(--k-ink); }
 
-/* 3. Speech Bubble */
 .speech-bubble {
     position: relative;
     background: #FFFFFF;
@@ -109,7 +106,6 @@ h1, h2, h3, h4 {
     border-color: #FFF transparent display; display: block; width: 0; z-index: 1;
 }
 
-/* 4. Input Fields */
 .comic-input {
     width: 100%;
     padding: 16px;
@@ -128,7 +124,6 @@ h1, h2, h3, h4 {
     background-color: rgba(255, 209, 102, 0.1);
 }
 
-/* 5. Badges / Stickers */
 .comic-badge {
     background: var(--k-red);
     color: #FFF;
@@ -154,7 +149,6 @@ header.hero {
 .hero p { font-size: 24px; max-width: 600px; margin: 20px auto 40px auto; }
 
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin: 60px 0; }
-.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin: 60px 0; }
 
 .pricing-card { text-align: center; background: #FFF; }
 .pricing-card h2 { font-size: 40px; color: var(--k-blue); }
@@ -163,6 +157,6 @@ header.hero {
 .pricing-card li { margin-bottom: 12px; font-size: 18px; border-bottom: 2px dashed var(--k-ink); padding-bottom: 8px; }
 
 @media (max-width: 800px) {
-    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    .grid-2 { grid-template-columns: 1fr; }
     .hero h1 { font-size: 60px; text-shadow: 3px 3px 0px #FFF, 6px 6px 0px var(--k-ink); }
 }
