@@ -1,11 +1,6 @@
-/* =========================================
-   KABOOM! UI - Free Core & Landing Page
-   ========================================= */
-
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap');
 
 :root {
-    /* Vintage Comic Color Palette */
     --k-paper: #FDFBF7;      
     --k-ink: #111111;        
     --k-red: #E63946;        
@@ -14,7 +9,6 @@
     --k-green: #06D6A0;      
     --k-white: #FFFFFF;
     
-    /* Standardized Comic Borders & Shadows */
     --k-stroke: 4px solid var(--k-ink);
     --k-shadow: 6px 6px 0px var(--k-ink);
     --k-shadow-hover: 2px 2px 0px var(--k-ink);
@@ -52,9 +46,7 @@ h1, h2, h3, h4 {
     background: var(--k-paper); opacity: 0.85; z-index: -1;
 }
 
-/* --- KABOOM CORE COMPONENTS --- */
-.k-container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
-
+/* --- KABOOM COMPONENTS --- */
 .k-card {
     background-color: var(--k-white);
     border: var(--k-stroke);
@@ -64,7 +56,6 @@ h1, h2, h3, h4 {
     position: relative;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.k-card:hover { transform: translateY(-4px); }
 
 .k-btn {
     display: inline-block;
@@ -85,6 +76,29 @@ h1, h2, h3, h4 {
 .k-btn.blue { background-color: var(--k-blue); color: var(--k-white); }
 .k-btn.blue:hover { background-color: var(--k-ink); }
 .k-btn.full { width: 100%; text-align: center; }
+
+.k-speech-bubble {
+    position: relative;
+    background: var(--k-white);
+    border: var(--k-stroke);
+    padding: 24px;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: var(--k-shadow);
+    font-size: 18px;
+    display: inline-block;
+    margin-bottom: 24px;
+}
+.k-speech-bubble::after {
+    content: ''; position: absolute; bottom: -24px; left: 50px;
+    border-width: 24px 24px 0; border-style: solid;
+    border-color: var(--k-ink) transparent; display: block; width: 0;
+}
+.k-speech-bubble::before {
+    content: ''; position: absolute; bottom: -16px; left: 54px;
+    border-width: 18px 18px 0; border-style: solid;
+    border-color: var(--k-white) transparent; display: block; width: 0; z-index: 1;
+}
 
 .k-input {
     width: 100%;
@@ -114,6 +128,8 @@ h1, h2, h3, h4 {
 }
 
 /* --- LANDING PAGE LAYOUT --- */
+.container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+
 header.hero {
     text-align: center;
     padding: 80px 20px;
