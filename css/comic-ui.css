@@ -1,0 +1,168 @@
+/* =========================================
+   KABOOM! UI - Retro Comic Design System
+   ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap');
+
+:root {
+    /* Vintage Comic Color Palette */
+    --k-paper: #FDFBF7;      /* Aged newsprint */
+    --k-ink: #111111;        /* Heavy black ink */
+    --k-red: #E63946;        /* Punchy comic red */
+    --k-yellow: #FFD166;     /* Mustard action yellow */
+    --k-blue: #457B9D;       /* Faded cyan */
+    --k-green: #06D6A0;      /* Toxic green */
+    
+    /* Standardized Comic Borders & Shadows */
+    --k-stroke: 4px solid var(--k-ink);
+    --k-shadow: 6px 6px 0px var(--k-ink);
+    --k-shadow-hover: 2px 2px 0px var(--k-ink);
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background-color: var(--k-paper);
+    color: var(--k-ink);
+    font-family: 'Comic Neue', cursive;
+    font-weight: 700;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 2px;
+    margin: 0 0 16px 0;
+    text-transform: uppercase;
+}
+
+/* --- THE HALFTONE DOT BACKGROUND --- */
+.halftone-bg {
+    background-image: radial-gradient(var(--k-ink) 15%, transparent 16%), radial-gradient(var(--k-ink) 15%, transparent 16%);
+    background-size: 14px 14px;
+    background-position: 0 0, 7px 7px;
+    position: relative;
+    z-index: 1;
+}
+.halftone-bg::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--k-paper); opacity: 0.85; z-index: -1;
+}
+
+/* --- KABOOM COMPONENTS --- */
+
+/* 1. Comic Card */
+.comic-card {
+    background-color: #FFFFFF;
+    border: var(--k-stroke);
+    box-shadow: var(--k-shadow);
+    padding: 32px;
+    border-radius: 2px;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* 2. Action Buttons */
+.comic-btn {
+    display: inline-block;
+    background-color: var(--k-yellow);
+    color: var(--k-ink);
+    border: var(--k-stroke);
+    box-shadow: var(--k-shadow);
+    padding: 12px 32px;
+    font-family: 'Bangers', cursive;
+    font-size: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+.comic-btn:hover { background-color: var(--k-red); color: #FFF; }
+.comic-btn:active { transform: translate(4px, 4px); box-shadow: var(--k-shadow-hover); }
+
+.comic-btn.secondary { background-color: var(--k-blue); color: #FFF; }
+.comic-btn.secondary:hover { background-color: var(--k-ink); }
+
+/* 3. Speech Bubble */
+.speech-bubble {
+    position: relative;
+    background: #FFFFFF;
+    border: var(--k-stroke);
+    padding: 24px;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: var(--k-shadow);
+    font-size: 18px;
+    display: inline-block;
+    margin-bottom: 24px;
+}
+.speech-bubble::after {
+    content: ''; position: absolute; bottom: -24px; left: 50px;
+    border-width: 24px 24px 0; border-style: solid;
+    border-color: var(--k-ink) transparent display; display: block; width: 0;
+}
+.speech-bubble::before {
+    content: ''; position: absolute; bottom: -16px; left: 54px;
+    border-width: 18px 18px 0; border-style: solid;
+    border-color: #FFF transparent display; display: block; width: 0; z-index: 1;
+}
+
+/* 4. Input Fields */
+.comic-input {
+    width: 100%;
+    padding: 16px;
+    background-color: #FFFFFF;
+    border: var(--k-stroke);
+    box-shadow: 4px 4px 0px rgba(17, 17, 17, 0.2);
+    font-family: 'Comic Neue', cursive;
+    font-size: 18px;
+    font-weight: 700;
+    outline: none;
+    transition: box-shadow 0.2s, background-color 0.2s;
+    margin-bottom: 16px;
+}
+.comic-input:focus {
+    box-shadow: var(--k-shadow);
+    background-color: rgba(255, 209, 102, 0.1);
+}
+
+/* 5. Badges / Stickers */
+.comic-badge {
+    background: var(--k-red);
+    color: #FFF;
+    font-family: 'Bangers', cursive;
+    padding: 4px 12px;
+    font-size: 18px;
+    border: 2px solid var(--k-ink);
+    transform: rotate(-5deg);
+    display: inline-block;
+    box-shadow: 3px 3px 0px var(--k-ink);
+}
+
+/* --- LANDING PAGE LAYOUT --- */
+.container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+
+header.hero {
+    text-align: center;
+    padding: 80px 20px;
+    border-bottom: var(--k-stroke);
+    background-color: var(--k-yellow);
+}
+.hero h1 { font-size: 80px; margin-bottom: 0; text-shadow: 4px 4px 0px #FFF, 8px 8px 0px var(--k-ink); }
+.hero p { font-size: 24px; max-width: 600px; margin: 20px auto 40px auto; }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin: 60px 0; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin: 60px 0; }
+
+.pricing-card { text-align: center; background: #FFF; }
+.pricing-card h2 { font-size: 40px; color: var(--k-blue); }
+.pricing-card .price { font-family: 'Bangers', cursive; font-size: 60px; margin: 20px 0; color: var(--k-red); }
+.pricing-card ul { list-style: none; padding: 0; margin: 0 0 30px 0; text-align: left; }
+.pricing-card li { margin-bottom: 12px; font-size: 18px; border-bottom: 2px dashed var(--k-ink); padding-bottom: 8px; }
+
+@media (max-width: 800px) {
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 60px; text-shadow: 3px 3px 0px #FFF, 6px 6px 0px var(--k-ink); }
+}
