@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KABOOM! UI - Retro Comic CSS Framework</title>
+    <link rel="stylesheet" href="css/comic-ui.css">
+</head>
+<body class="halftone-bg">
+
+    <header class="hero">
+        <div class="speech-bubble">Holy CSS, Batman!</div>
+        <h1>KABOOM! UI</h1>
+        <p>A purely nostalgic, 100% CSS design system. Bring back the heavy ink, offset shadows, and halftone dots of vintage comic books.</p>
+        <a href="#pricing" class="comic-btn">Get the Kit</a>
+        <a href="#components" class="comic-btn secondary" style="margin-left: 16px;">View Components</a>
+    </header>
+
+    <div class="container" id="components">
+        <div style="text-align: center; margin-bottom: 40px;">
+            <div class="comic-badge">Components Included!</div>
+            <h2>Build Pages With a PUNCH 🥊</h2>
+        </div>
+
+        <div class="grid-2">
+            <div class="comic-card">
+                <h3>Action Buttons</h3>
+                <p>Heavy borders and misaligned print shadows that physically press down when clicked.</p>
+                <button class="comic-btn" onclick="bamEffect()">Primary Action</button>
+                <br><br>
+                <button class="comic-btn secondary">Secondary Act</button>
+            </div>
+
+            <div class="comic-card" style="background-color: var(--k-green);">
+                <h3 style="color: #FFF; text-shadow: 2px 2px 0px var(--k-ink);">Forms & Inputs</h3>
+                <input type="text" class="comic-input" placeholder="Enter your superhero name...">
+                <input type="email" class="comic-input" placeholder="Secret email address...">
+                <button class="comic-btn" style="width: 100%;">Subscribe!</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="pricing">
+        <h2 style="text-align: center; font-size: 48px;">Choose Your Arsenal</h2>
+        
+        <div class="grid-2" style="max-width: 800px; margin: 40px auto;">
+            <div class="comic-card pricing-card">
+                <h2>The Sidekick</h2>
+                <p>Perfect for trying out the aesthetic.</p>
+                <div class="price">FREE</div>
+                <ul>
+                    <li>✔ Basic CSS File</li>
+                    <li>✔ Buttons & Inputs</li>
+                    <li>✔ Halftone Backgrounds</li>
+                    <li>✖ No Premium Components</li>
+                    <li>✖ No Page Templates</li>
+                </ul>
+                <a href="https://github.com/gorupa" target="_blank" class="comic-btn secondary" style="width: 100%;">Download Lite</a>
+            </div>
+
+            <div class="comic-card pricing-card" style="transform: scale(1.05); border-color: var(--k-red);">
+                <div class="comic-badge" style="position: absolute; top: -15px; right: -10px;">BEST VALUE!</div>
+                <h2>The Superhero</h2>
+                <p>The complete framework for serious builders.</p>
+                <div class="price">₹499 <span style="font-size: 20px; color: #555;">(or $9)</span></div>
+                <ul>
+                    <li>✔ Everything in Free</li>
+                    <li>✔ 50+ Premium UI Components</li>
+                    <li>✔ 3 Ready-to-use HTML Templates</li>
+                    <li>✔ Figma Design Assets</li>
+                    <li>✔ Lifetime Updates</li>
+                </ul>
+                <button class="comic-btn" style="width: 100%;" onclick="alert('Checkout integration coming soon!')">Buy Pro Kit</button>
+            </div>
+        </div>
+    </div>
+
+    <footer style="text-align: center; padding: 40px; border-top: var(--k-stroke); background: #FFF;">
+        <h2>KABOOM! UI</h2>
+        <p>Built with heavy ink by <a href="https://gorupa.github.io/" target="_blank" style="color: var(--k-red);">Gaurav</a>.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
