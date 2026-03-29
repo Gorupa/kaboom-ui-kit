@@ -3,6 +3,7 @@ function bamEffect() {
     const word = words[Math.floor(Math.random() * words.length)];
     
     const badge = document.createElement('div');
+    // Updated to match your new k- prefix system!
     badge.className = 'k-badge';
     badge.innerText = word;
     
@@ -13,7 +14,7 @@ function bamEffect() {
         transform: 'translate(-50%, -50%) rotate(' + (Math.random() * 20 - 10) + 'deg) scale(0)',
         fontSize: '80px',
         zIndex: '9999',
-        boxShadow: '8px 8px 0px var(--k-ink)',
+        boxShadow: '8px 8px 0px var(--k-ink)', /* Updated to use your CSS variable */
         transition: 'transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)'
     });
 
