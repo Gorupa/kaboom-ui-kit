@@ -1,7 +1,3 @@
-/* =========================================
-   KABOOM! UI - Free Public Version
-   ========================================= */
-
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap');
 
 :root {
@@ -37,7 +33,6 @@ h1, h2, h3, h4 {
     text-transform: uppercase;
 }
 
-/* --- THE HALFTONE DOT BACKGROUND --- */
 .k-halftone {
     background-image: radial-gradient(var(--k-ink) 15%, transparent 16%), radial-gradient(var(--k-ink) 15%, transparent 16%);
     background-size: 14px 14px;
@@ -49,8 +44,6 @@ h1, h2, h3, h4 {
     content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
     background: var(--k-paper); opacity: 0.85; z-index: -1;
 }
-
-/* --- FREE COMPONENTS --- */
 
 .k-card {
     background-color: var(--k-white);
@@ -78,7 +71,6 @@ h1, h2, h3, h4 {
 }
 .k-btn:hover { background-color: var(--k-red); color: var(--k-white); }
 .k-btn:active { transform: translate(4px, 4px); box-shadow: var(--k-shadow-hover); }
-
 .k-btn.blue { background-color: var(--k-blue); color: var(--k-white); }
 .k-btn.blue:hover { background-color: var(--k-ink); }
 .k-btn.full { width: 100%; text-align: center; }
@@ -119,36 +111,23 @@ h1, h2, h3, h4 {
     transition: box-shadow 0.2s, background-color 0.2s;
     margin-bottom: 16px;
 }
-.k-input:focus {
-    box-shadow: var(--k-shadow);
-    background-color: rgba(255, 209, 102, 0.1);
-}
+.k-input:focus { box-shadow: var(--k-shadow); background-color: rgba(255, 209, 102, 0.1); }
 
 .k-badge {
-    background: var(--k-red);
-    color: var(--k-white);
-    font-family: 'Bangers', cursive;
-    padding: 4px 12px;
-    font-size: 18px;
-    border: 2px solid var(--k-ink);
-    transform: rotate(-5deg);
-    display: inline-block;
-    box-shadow: 3px 3px 0px var(--k-ink);
+    background: var(--k-red); color: var(--k-white); font-family: 'Bangers', cursive;
+    padding: 4px 12px; font-size: 18px; border: 2px solid var(--k-ink);
+    transform: rotate(-5deg); display: inline-block; box-shadow: 3px 3px 0px var(--k-ink);
 }
 
-/* --- LANDING PAGE LAYOUT --- */
 .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
-
-header.hero {
-    text-align: center;
-    padding: 80px 20px;
-    border-bottom: var(--k-stroke);
-    background-color: var(--k-yellow);
-}
+header.hero { text-align: center; padding: 80px 20px 100px 20px; border-bottom: var(--k-stroke); background-color: var(--k-yellow); }
 .hero h1 { font-size: 80px; margin-bottom: 0; text-shadow: 4px 4px 0px var(--k-white), 8px 8px 0px var(--k-ink); }
 .hero p { font-size: 24px; max-width: 600px; margin: 20px auto 40px auto; }
 
-.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin: 60px 0; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.feature-list { list-style: none; padding: 0; margin: 0; font-size: 18px; }
+.feature-list li { margin-bottom: 10px; border-bottom: 2px dashed var(--k-ink); padding-bottom: 5px; }
 
 .pricing-card { text-align: center; background: var(--k-white); }
 .pricing-card h2 { font-size: 40px; color: var(--k-blue); }
@@ -157,6 +136,6 @@ header.hero {
 .pricing-card li { margin-bottom: 12px; font-size: 18px; border-bottom: 2px dashed var(--k-ink); padding-bottom: 8px; }
 
 @media (max-width: 800px) {
-    .grid-2 { grid-template-columns: 1fr; }
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
     .hero h1 { font-size: 60px; text-shadow: 3px 3px 0px var(--k-white), 6px 6px 0px var(--k-ink); }
 }
