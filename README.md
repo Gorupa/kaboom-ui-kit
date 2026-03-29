@@ -200,8 +200,6 @@ See [`LICENSE`](./LICENSE) for the full text.
 
 **Built with 🥊 by ink-stained developers who peaked in 1994.**
 
-[Website](://kaboom-ui-kit.pages.dev) · 
-
-*"With great CSS comes great responsibility."*
+[Website](https://kaboom-ui-kit.pages.dev/) 
 
 </div>
