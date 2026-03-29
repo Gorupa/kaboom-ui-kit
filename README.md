@@ -152,10 +152,8 @@ For teams and solo devs who want the **full arsenal**:
 
 - 💥 **50+ components** — panels, splash pages, action strips, villain callouts, zap alerts, progress bars, comic-strip grid layouts, tooltips, modals, and more
 - 🎨 **Pre-built page templates** — landing pages, pricing pages, and portfolios, ready to customize
-- 🖼️ **Figma source files** — the complete component library, editable and yours to keep
-- 🌑 **Noir Edition** — a full dark mode palette, because even heroes need a dark arc
 - ⚡ **Animated ink-splat transitions** — CSS only, naturally
-- 🥊 **Priority support** via a private Discord channel
+
 
 > 🎨 **[Unlock the Superhero Tier →](https://kaboom-ui-kit.pages.dev/)** — *Because sidekicks never get the glory.*
 
