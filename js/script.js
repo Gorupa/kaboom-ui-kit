@@ -1,5 +1,4 @@
 function bamEffect() {
-    // Creates a fun comic book visual effect when the button is clicked
     const words = ["BAM!", "POW!", "WHAM!", "ZAP!"];
     const word = words[Math.floor(Math.random() * words.length)];
     
@@ -7,7 +6,6 @@ function bamEffect() {
     badge.className = 'comic-badge';
     badge.innerText = word;
     
-    // Style it to pop up in the middle of the screen
     Object.assign(badge.style, {
         position: 'fixed',
         top: '50%',
@@ -21,10 +19,8 @@ function bamEffect() {
 
     document.body.appendChild(badge);
 
-    // Animate in
     setTimeout(() => { badge.style.transform = badge.style.transform.replace('scale(0)', 'scale(1)'); }, 10);
 
-    // Remove after 1 second
     setTimeout(() => {
         badge.style.transform = badge.style.transform.replace('scale(1)', 'scale(0)');
         setTimeout(() => badge.remove(), 200);
