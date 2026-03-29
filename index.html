@@ -5,29 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KABOOM! UI - Retro Comic CSS Framework</title>
     <link rel="stylesheet" href="css/kaboom-core.css">
-    <style>
-        .hero { text-align: center; padding: 80px 20px; border-bottom: var(--k-stroke); background-color: var(--k-yellow); }
-        .hero h1 { font-size: 80px; margin-bottom: 0; text-shadow: 4px 4px 0px #FFF, 8px 8px 0px var(--k-ink); }
-        .hero p { font-size: 24px; max-width: 600px; margin: 20px auto 40px auto; }
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin: 60px 0; }
-        .pricing-card { text-align: center; }
-        .pricing-card h2 { font-size: 40px; color: var(--k-blue); }
-        .pricing-card .price { font-family: 'Bangers', cursive; font-size: 60px; margin: 20px 0; color: var(--k-red); }
-        .pricing-card ul { list-style: none; padding: 0; margin: 0 0 30px 0; text-align: left; }
-        .pricing-card li { margin-bottom: 12px; font-size: 18px; border-bottom: 2px dashed var(--k-ink); padding-bottom: 8px; }
-    </style>
 </head>
 <body class="k-halftone">
 
     <header class="hero">
-        <div class="k-badge" style="margin-bottom: 20px;">Holy CSS, Batman!</div>
+        <div class="k-speech-bubble">Holy CSS, Batman!</div>
         <h1>KABOOM! UI</h1>
         <p>A purely nostalgic, 100% CSS design system. Bring back the heavy ink, offset shadows, and halftone dots of vintage comic books.</p>
         <a href="#pricing" class="k-btn">Get the Kit</a>
         <a href="#components" class="k-btn blue" style="margin-left: 16px;">View Components</a>
     </header>
 
-    <div class="k-container" id="components">
+    <div class="container" id="components">
         <div style="text-align: center; margin-bottom: 40px;">
             <div class="k-badge">Components Included!</div>
             <h2>Build Pages With a PUNCH 🥊</h2>
@@ -51,11 +40,10 @@
         </div>
     </div>
 
-    <div class="k-container" id="pricing">
+    <div class="container" id="pricing">
         <h2 style="text-align: center; font-size: 48px;">Choose Your Arsenal</h2>
         
         <div class="grid-2" style="max-width: 800px; margin: 40px auto;">
-            
             <div class="k-card pricing-card">
                 <h2>The Sidekick</h2>
                 <p>Perfect for trying out the aesthetic.</p>
@@ -67,7 +55,7 @@
                     <li>✖ No Premium Components</li>
                     <li>✖ No Page Templates</li>
                 </ul>
-                <a href="https://github.com/gorupa/kaboom-ui" target="_blank" class="k-btn blue full" style="text-decoration: none;">View Source (GitHub)</a>
+                <a href="https://github.com/gorupa/kaboom-ui" target="_blank" class="k-btn blue full" style="text-decoration: none;">View Source</a>
             </div>
 
             <div class="k-card pricing-card" style="transform: scale(1.05); border-color: var(--k-red);">
