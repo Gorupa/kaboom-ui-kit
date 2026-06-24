@@ -20,8 +20,12 @@ function bamEffect() {
 
     document.body.appendChild(badge);
 
-    setTimeout(() => { badge.style.transform = badge.style.transform.replace('scale(0)', 'scale(1)'); }, 10);
+    // Trigger the pop-in animation
+    setTimeout(() => { 
+        badge.style.transform = badge.style.transform.replace('scale(0)', 'scale(1)'); 
+    }, 10);
 
+    // Trigger the fade/scale-out animation and remove from DOM
     setTimeout(() => {
         badge.style.transform = badge.style.transform.replace('scale(1)', 'scale(0)');
         setTimeout(() => badge.remove(), 200);
@@ -38,7 +42,8 @@ function updateBubble() {
         bubble.style.transform = "scale(1)";
     } else {
         bubble.innerText = input;
-        // Add a slight pop animation when typing
+        
+        // Add a slight pop animation when typing for that dynamic comic feel
         bubble.style.transform = "scale(1.02)";
         setTimeout(() => bubble.style.transform = "scale(1)", 100);
     }
