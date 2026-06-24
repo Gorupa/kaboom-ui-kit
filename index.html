@@ -94,6 +94,7 @@
         
         <div class="grid-3" style="max-width: 1100px; margin: 40px auto;">
             
+            <!-- FREE TIER -->
             <div class="k-card pricing-card">
                 <h2>The Sidekick</h2>
                 <p>Perfect for trying out the aesthetic.</p>
@@ -109,6 +110,7 @@
                 <a href="https://github.com/Gorupa/kaboom-ui-kit" target="_blank" class="k-btn blue full" style="text-decoration: none;">Download Lite</a>
             </div>
 
+            <!-- PREMIUM TIER -->
             <div class="k-card pricing-card" style="transform: scale(1.05); border-color: var(--k-red); z-index: 2;">
                 <div class="k-badge" style="position: absolute; top: -15px; right: -10px;">BEST VALUE!</div>
                 <h2>The Superhero</h2>
@@ -122,22 +124,28 @@
                     <li>✔ 3 Ready-to-use Templates</li>
                 </ul>
                 
-                <a href="https://paypal.me/GKalal163/16" target="_blank" class="k-btn full" style="background-color: var(--k-blue); color: var(--k-white); text-decoration: none; display: inline-block; font-size: 16px; margin-bottom: 8px;">🌍 Pay $16 (PayPal)</a>
+                <!-- PayPal Smart Button Container for Premium -->
+                <div id="paypal-button-premium" style="margin-bottom: 8px; position: relative; z-index: 10; min-height: 48px;"></div>
                 
                 <a href="upi://pay?pa=gauravkalal@ybl&pn=Gaurav&cu=INR&am=1350&tn=KABOOM%20UI%20Premium" class="k-btn full" style="text-decoration: none; display: inline-block; font-size: 16px; margin-bottom: 12px;">🇮🇳 Pay ₹1350 (UPI)</a>
                 
+                <!-- UPGRADE OPTION FOR EXISTING USERS -->
                 <div style="border-top: 2px dashed var(--k-ink); border-bottom: 2px dashed var(--k-ink); margin: 16px 0; padding: 12px 0;">
                     <p style="font-size: 14px; font-weight: bold; margin: 0 0 8px 0; color: var(--k-ink);">Already own Premium v1?</p>
-                    <a href="https://paypal.me/GKalal163/10" target="_blank" class="k-btn full" style="background-color: var(--k-yellow); color: var(--k-ink); text-decoration: none; display: inline-block; font-size: 14px; padding: 8px;">🌍 Upgrade to v2 for $10</a>
+                    
+                    <!-- PayPal Smart Button Container for Upgrade -->
+                    <div id="paypal-button-upgrade" style="margin-bottom: 8px; position: relative; z-index: 10; min-height: 48px;"></div>
+                    
                     <a href="upi://pay?pa=gauravkalal@ybl&pn=Gaurav&cu=INR&am=850&tn=KABOOM%20UI%20Premium%20V2%20Upgrade" class="k-btn full" style="text-decoration: none; display: inline-block; font-size: 14px; padding: 8px; margin-top: 6px;">🇮🇳 Upgrade for ₹850 (UPI)</a>
                     <p style="font-size: 11px; margin: 8px 0 0 0; line-height: 1.2;">*Must provide proof of existing v1 purchase.</p>
                 </div>
 
-                <a href="https://wa.me/917339992788?text=Hey%20Gaurav!%20%F0%9F%92%A5%20I%20just%20paid%20for%20the%20KABOOM!%20Premium%20Kit.%20Here%20is%20my%20screenshot%3A" target="_blank" class="k-btn full" style="background-color: var(--k-green); text-decoration: none; display: inline-block; font-size: 16px;">Step 2: Send Screenshot</a>
+                <a href="https://wa.me/917339992788?text=Hey%20Gaurav!%20%F0%9F%92%A5%20I%20just%20paid%20for%20the%20KABOOM!%20Premium%20Kit.%20Here%20is%20my%20screenshot%3A" target="_blank" class="k-btn full" style="background-color: var(--k-green); text-decoration: none; display: inline-block; font-size: 16px;">Step 2: Send Screenshot (UPI)</a>
                 
-                <p style="font-size: 13px; margin-top: 16px; color: var(--k-ink); font-weight: bold; line-height: 1.4;">*Pay via PayPal or UPI, then send the screenshot on WhatsApp to get your .zip instantly!</p>
+                <p style="font-size: 13px; margin-top: 16px; color: var(--k-ink); font-weight: bold; line-height: 1.4;">*PayPal buyers are auto-redirected. UPI buyers must send screenshot manually.</p>
             </div>
 
+            <!-- ELITE TIER -->
             <div class="k-card pricing-card" style="border-color: var(--k-ink);">
                 <div class="k-badge" style="position: absolute; top: -15px; left: -10px; background: var(--k-ink); color: var(--k-white);">THE FULL ARSENAL</div>
                 <h2>The Elite</h2>
@@ -152,13 +160,14 @@
                     <li>✔ Priority Email Support</li>
                 </ul>
                 
-                <a href="https://paypal.me/GKalal163/30" target="_blank" class="k-btn full" style="background-color: var(--k-blue); color: var(--k-white); text-decoration: none; display: inline-block; font-size: 16px; margin-bottom: 8px;">🌍 Pay $30 (PayPal)</a>
+                <!-- PayPal Smart Button Container for Elite -->
+                <div id="paypal-button-elite" style="margin-bottom: 8px; position: relative; z-index: 10; min-height: 48px;"></div>
 
                 <a href="upi://pay?pa=gauravkalal@ybl&pn=Gaurav&cu=INR&am=2500&tn=KABOOM%20UI%20Elite" class="k-btn full" style="text-decoration: none; display: inline-block; font-size: 16px; margin-bottom: 12px;">🇮🇳 Pay ₹2500 (UPI)</a>
                 
-                <a href="https://wa.me/917339992788?text=Hey%20Gaurav!%20%F0%9F%92%A5%20I%20just%20paid%20for%20the%20KABOOM!%20Elite%20Kit.%20Here%20is%20my%20screenshot%3A" target="_blank" class="k-btn full" style="background-color: var(--k-green); text-decoration: none; display: inline-block; font-size: 16px;">Step 2: Send Screenshot</a>
+                <a href="https://wa.me/917339992788?text=Hey%20Gaurav!%20%F0%9F%92%A5%20I%20just%20paid%20for%20the%20KABOOM!%20Elite%20Kit.%20Here%20is%20my%20screenshot%3A" target="_blank" class="k-btn full" style="background-color: var(--k-green); text-decoration: none; display: inline-block; font-size: 16px;">Step 2: Send Screenshot (UPI)</a>
                 
-                <p style="font-size: 13px; margin-top: 16px; color: var(--k-ink); font-weight: bold; line-height: 1.4;">*Pay via PayPal or UPI, then send the screenshot on WhatsApp to get your Elite .zip instantly!</p>
+                <p style="font-size: 13px; margin-top: 16px; color: var(--k-ink); font-weight: bold; line-height: 1.4;">*PayPal buyers are auto-redirected. UPI buyers must send screenshot manually.</p>
             </div>
             
         </div>
@@ -176,7 +185,7 @@
                 <h4 style="margin: 0; color: var(--k-red);">— Bruce W., Developer</h4>
             </div>
             <div class="k-card" style="border-radius: 15px 255px 225px 15px/225px 15px 255px 15px;">
-                <p style="font-size: 18px; font-style: italic;">"The Premium toolkit is fantastic! It gave my project that exact retro comic feel I was looking for from all the way here in South Africa!"</p>
+                <p style="font-size: 18px; font-style: italic;">"The Elite toolkit is fantastic! It gave my project that exact retro comic feel I was looking for from all the way here in South Africa!"</p>
                 <h4 style="margin: 0; color: var(--k-green);">— Shaheen Phekoo, South Africa</h4>
             </div>
         </div>
@@ -193,6 +202,8 @@
         </p>
     </footer>
 
+    <!-- Official PayPal SDK using your specific Client ID -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AWR-vD0rPDrCeN2gfGlN7OfKljkuZ9ra2S-TKObohBorjN1pyriZ83zGp-oXcGj8VxHN53FKFpbAvOgq&currency=USD"></script>
     <script src="js/script.js"></script>
 </body>
-                </html>
+                    </html>
