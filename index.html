@@ -6,6 +6,11 @@
     <title>KABOOM! UI - Retro Comic CSS Framework</title>
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="stylesheet" href="css/comic-ui.css">
+    <style>
+        /* Center Razorpay payment-button iframes to match PayPal smart buttons */
+        .k-razorpay-wrap { display: flex; justify-content: center; margin-bottom: 8px; min-height: 48px; }
+        .k-razorpay-wrap form { display: flex; justify-content: center; width: 100%; }
+    </style>
 </head>
 <body class="k-halftone">
 
@@ -128,7 +133,12 @@
                 <!-- PayPal Smart Button Container for Premium -->
                 <div id="paypal-button-premium" style="margin-bottom: 8px; position: relative; z-index: 10; min-height: 48px;"></div>
                 
-                <a href="upi://pay?pa=gauravkalal@ybl&pn=Gaurav&cu=INR&am=1350&tn=KABOOM%20UI%20Premium" class="k-btn full" style="text-decoration: none; display: inline-block; font-size: 16px; margin-bottom: 12px;">🇮🇳 Pay ₹1350 (UPI)</a>
+                <!-- Razorpay Payment Button for Premium (Superhero) -->
+                <div class="k-razorpay-wrap">
+                    <form>
+                        <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_T7gKF5muslKIgS" async></script>
+                    </form>
+                </div>
                 
                 <!-- UPGRADE OPTION FOR EXISTING USERS -->
                 <div style="border-top: 2px dashed var(--k-ink); border-bottom: 2px dashed var(--k-ink); margin: 16px 0; padding: 12px 0;">
@@ -138,12 +148,10 @@
                     <div id="paypal-button-upgrade" style="margin-bottom: 8px; position: relative; z-index: 10; min-height: 48px;"></div>
                     
                     <a href="upi://pay?pa=gauravkalal@ybl&pn=Gaurav&cu=INR&am=850&tn=KABOOM%20UI%20Premium%20V2%20Upgrade" class="k-btn full" style="text-decoration: none; display: inline-block; font-size: 14px; padding: 8px; margin-top: 6px;">🇮🇳 Upgrade for ₹850 (UPI)</a>
-                    <p style="font-size: 11px; margin: 8px 0 0 0; line-height: 1.2;">*Must provide proof of existing v1 purchase.</p>
+                    <p style="font-size: 11px; margin: 8px 0 0 0; line-height: 1.2;">*Must provide proof of existing v1 purchase. Send screenshot via <a href="https://wa.me/917339992788" target="_blank">WhatsApp</a>.</p>
                 </div>
 
-                <a href="https://wa.me/917339992788?text=Hey%20Gaurav!%20%F0%9F%92%A5%20I%20just%20paid%20for%20the%20KABOOM!%20Premium%20Kit.%20Here%20is%20my%20screenshot%3A" target="_blank" class="k-btn full" style="background-color: var(--k-green); text-decoration: none; display: inline-block; font-size: 16px;">Step 2: Send Screenshot (UPI)</a>
-                
-                <p style="font-size: 13px; margin-top: 16px; color: var(--k-ink); font-weight: bold; line-height: 1.4;">*PayPal buyers are auto-redirected. UPI buyers must send screenshot manually.</p>
+                <p style="font-size: 13px; margin-top: 16px; color: var(--k-ink); font-weight: bold; line-height: 1.4;">*Your kit is delivered straight to your email automatically — no manual steps needed.</p>
             </div>
 
             <!-- ELITE TIER -->
@@ -164,11 +172,14 @@
                 <!-- PayPal Smart Button Container for Elite -->
                 <div id="paypal-button-elite" style="margin-bottom: 8px; position: relative; z-index: 10; min-height: 48px;"></div>
 
-                <a href="upi://pay?pa=gauravkalal@ybl&pn=Gaurav&cu=INR&am=2500&tn=KABOOM%20UI%20Elite" class="k-btn full" style="text-decoration: none; display: inline-block; font-size: 16px; margin-bottom: 12px;">🇮🇳 Pay ₹2500 (UPI)</a>
-                
-                <a href="https://wa.me/917339992788?text=Hey%20Gaurav!%20%F0%9F%92%A5%20I%20just%20paid%20for%20the%20KABOOM!%20Elite%20Kit.%20Here%20is%20my%20screenshot%3A" target="_blank" class="k-btn full" style="background-color: var(--k-green); text-decoration: none; display: inline-block; font-size: 16px;">Step 2: Send Screenshot (UPI)</a>
-                
-                <p style="font-size: 13px; margin-top: 16px; color: var(--k-ink); font-weight: bold; line-height: 1.4;">*PayPal buyers are auto-redirected. UPI buyers must send screenshot manually.</p>
+                <!-- Razorpay Payment Button for Elite -->
+                <div class="k-razorpay-wrap">
+                    <form>
+                        <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_T7gM1nO4DNGAXz" async></script>
+                    </form>
+                </div>
+
+                <p style="font-size: 13px; margin-top: 16px; color: var(--k-ink); font-weight: bold; line-height: 1.4;">*Your kit is delivered straight to your email automatically — no manual steps needed.</p>
             </div>
             
         </div>
